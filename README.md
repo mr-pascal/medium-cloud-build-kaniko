@@ -18,7 +18,6 @@ docker run -d -p 3000:3000 kaniko-demo
 ```sh
 # Set GCP project
 gcloud config set project <project>
-gcloud config set project pascal-sandbox-1112
 
 # Trigger Cloud Build
 gcloud builds submit --region <region> --config <path_to_cloudbuild_yaml> <path_to_build_context>
