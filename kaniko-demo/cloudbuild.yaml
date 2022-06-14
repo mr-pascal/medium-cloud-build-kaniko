@@ -2,6 +2,7 @@ steps:
   # Build the container image and push it with Kaniko
   - name: 'gcr.io/kaniko-project/executor:latest'
     args:
-    - "--dockerfile=Dockerfile"
-    - "--cache=true"
-    - "--destination=eu.gcr.io/$PROJECT_ID/nestjs-kaniko:$COMMIT_SHA"
+    - --cache=true
+    - --cache-copy-layers=true
+    - --compressed-caching=false
+    - --destination=eu.gcr.io/$PROJECT_ID/kaniko-demo:$COMMIT_SHA
