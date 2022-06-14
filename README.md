@@ -5,10 +5,10 @@ Run the below commands inside the `kaniko-demo` folder!
 ## Docker
 
 ```sh
-# Build docker container
+# Build "kaniko-demo" app on your local machine
 docker build -t kaniko-demo .
 
-# Run container in detached mode
+# Run local container in detached mode
 docker run -d -p 3000:3000 kaniko-demo
 
 ```
@@ -19,7 +19,7 @@ docker run -d -p 3000:3000 kaniko-demo
 # Set GCP project
 gcloud config set project <project>
 
-# Trigger Cloud Build
+# Build "kaniko-demo" app on Cloud Build
 gcloud builds submit --region <region> --config <path_to_cloudbuild_yaml> <path_to_build_context>
 gcloud builds submit --region europe-west2 --config cloudbuild.yaml .
 
