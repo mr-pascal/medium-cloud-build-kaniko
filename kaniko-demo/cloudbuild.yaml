@@ -3,6 +3,4 @@ steps:
   - name: 'gcr.io/kaniko-project/executor:latest'
     args:
     - --cache=true
-    - --cache-copy-layers=true
-    - --compressed-caching=false
     - --destination=eu.gcr.io/$PROJECT_ID/kaniko-demo:$COMMIT_SHA
